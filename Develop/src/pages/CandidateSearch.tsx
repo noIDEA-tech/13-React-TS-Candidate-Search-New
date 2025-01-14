@@ -52,56 +52,51 @@ const CandidateSearch = () => {
   }
 
   return  (
-    <div className="flex flex-col items-center p-8 max-w-2x1 mx-auto">
-      <h1 className="text-3x1 mb-8">Candidate Search</h1>
+    <div className="flex flex-col items-center justify-center min-h-screen p-8">
+      <h1 className="text-5xl font-bold mb-12 text-white">Candidate Search</h1>
 
-      <div className="bg-gray-800 p-6 rounded-lg shadow-lg w-full">
-        <div className="flex flex-col items-center">
-          <img 
-            src={currentCandidate.avatar_url} 
-            alt={`${currentCandidate.login}'s avatar`}
-            className="w-32 h-32 rounded-full mb-4"
-          />
-          <h2 className="text-xl font-bold mb-2">
-            {currentCandidate.name || currentCandidate.login}
-          </h2>
-      
-          <div className="w-full space-y-2 mb-6">
-            <p>Username: {currentCandidate.login}</p>
-            {currentCandidate.location && <p>Location: {currentCandidate.location}</p>}
-            {currentCandidate.email && <p>Email: {currentCandidate.email}</p>}
-            {currentCandidate.company && <p>Company: {currentCandidate.company}</p>}
-            {currentCandidate.bio && <p>Bio: {currentCandidate.bio}</p>}
-            <p>
-              <a 
-                href={currentCandidate.html_url ?? ''}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-400 hover:text-blue-300"
-              >
-                GitHub Profile
-              </a>
-            </p>
-          </div>
+      <div className="bg-black rounded-lg shadow-xl w-full max-w-md p-8">
+        <img 
+          src={currentCandidate.avatar_url} 
+          alt={`${currentCandidate.login}'s avatar`}
+          className="w-48 h-48 rounded-lg mx-auto mb-8"
+        />
+        
+        <h2 className="text-2xl font-bold mb-4 text-white">
+          {currentCandidate.name || currentCandidate.login}
+        </h2>
+        
+        <div className="space-y-2 mb-6">
+        {currentCandidate.location && (
+          <p>Location: {currentCandidate.location}</p>
+        )}
+        {currentCandidate.email && (
+          <p>Email: {currentCandidate.email}</p>
+        )}
+        {currentCandidate.company && (
+          <p>Company: {currentCandidate.company}</p>
+        )}
+        {currentCandidate.bio && (
+          <p>Bio: {currentCandidate.bio}</p>
+        )}
+      </div>
 
-          <div className="flex space-x-4">
-            <button
-              onClick={() => fetchNextCandidate()}
-              className="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded"
-            >
-              Reject
-            </button>
-            <button
-              onClick={handleAccept}
-              className="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded"
-            >
-              Accept
-            </button>
-          </div>
-        </div>
+      <div className="flex justify-center space-x-6 mt-8">
+        <button
+          onClick={() => fetchNextCandidate()}
+          className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-lg text-lg font-semibold"
+        >
+          Reject
+        </button>
+        <button
+          onClick={handleAccept}
+          className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg text-lg font-semibold"
+        >
+          Accept
+        </button>
       </div>
     </div>
-  );
+  </div>
+);
 };
-
 export default CandidateSearch;

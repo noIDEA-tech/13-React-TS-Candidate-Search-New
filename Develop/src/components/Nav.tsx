@@ -5,14 +5,14 @@ const Nav = () => {
   return (
     <div>
       <nav className="nav">
-        <ul className="flex">
+        <ul className="flex space-x-8 text-lg">
           <li className="nav-item">
-            <NavLink
+            <NavLink 
               to="/"
               className={({ isActive }) => 
-                isActive ? 'nav-link active' : 'nav-link'
-            }
-          >
+                isActive ? 'nav-link active font-bold' : 'nav-link'
+              }
+            >
               Search Candidates
             </NavLink>
           </li>
@@ -20,8 +20,8 @@ const Nav = () => {
             <NavLink
               to="/SavedCandidates"
               className={({ isActive }) =>
-               isActive ? 'nav-link active' : 'nav-link'
-            }
+                isActive ? 'nav-link active font-bold' : 'nav-link'
+              }
           >
             Saved Candidates
             </NavLink>
