@@ -31,6 +31,14 @@ This is a Candidate Search App that uses an API to retrieve User data from the G
 * Create .env file in the environment folder
 * Add your GitHub token to .env as: VITE_GITHUB_TOKEN=your_token_here
 
+## Deployment (Render)
+* Build Command: `npm install && npm run build`
+* Start Command: `npm run start`
+* Environment Variables Required:
+  - VITE_GITHUB_TOKEN
+
+For detailed deployment instructions, refer to the [Render deployment guide](https://coding-boot-camp.github.io/full-stack/render/render-deployment-guide)
+
 ## Usage
 * npm run dev
 * npm run build
