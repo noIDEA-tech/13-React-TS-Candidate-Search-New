@@ -71,6 +71,7 @@ const CandidateSearch = () => {
             {currentCandidate.location && <p>Location: {currentCandidate.location}</p>}
             {currentCandidate.email && <p>Email: {currentCandidate.email}</p>}
             {currentCandidate.company && <p>Company: {currentCandidate.company}</p>}
+            {currentCandidate.bio && <p>Bio: {currentCandidate.bio}</p>}
             <p>
               <a 
                 href={currentCandidate.html_url ?? ''}
@@ -88,13 +89,13 @@ const CandidateSearch = () => {
               onClick={() => fetchNextCandidate()}
               className="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded"
             >
-              -
+              Reject
             </button>
             <button
               onClick={handleAccept}
               className="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded"
             >
-              +
+              Accept
             </button>
           </div>
         </div>

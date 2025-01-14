@@ -8,4 +8,5 @@ export interface Candidate {
     html_url: string | null;
     company: string | null;
     id: number;
+    bio: string | null;
 }

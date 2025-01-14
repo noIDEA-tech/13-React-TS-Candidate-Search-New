@@ -85,7 +85,10 @@ const SavedCandidates = () => {
               <th onClick={() => handleSort('company')} className="cursor-pointer">
                 Company {sortField === 'company' && (sortDirection === 'asc' ? '↑' : '↓')}
               </th>
-              <th>Actions</th>
+              <th onClick={() => handleSort('bio')}>
+                Bio {sortField === 'bio' && (sortDirection === 'asc' ? '↑' : '↓')}
+              </th>
+              <th>Reject</th>
             </tr>
           </thead>
           <tbody>
