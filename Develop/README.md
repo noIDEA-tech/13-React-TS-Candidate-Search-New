@@ -1,33 +1,58 @@
-# React + TypeScript + Vite
+# Candidate Search
+![MIT](https://img.shields.io/badge/License-MIT-blue)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Website: 
+[website](https://github.com/noIDEA-tech/13-React-TS-Candidate-Search-New/tree/main/Develop)
 
-Currently, two official plugins are available:
+## Description
+This is a Candidate Search App that uses an API to retrieve User data from the GitHub API  for the purpose of searching for and saving potential candidates to employ.
 
-* [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md), which uses [Babel](https://babeljs.io/) for Fast Refresh
-* [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc), which uses [SWC](https://swc.rs/) for Fast Refresh
+## Rendered Application Images
+![App Screenshot](./src/assets/images/App-image1.png)
+![App Screenshot](./src/assets/images/App-image2.png)
+## Table of Contents
+- [Installation](#installation)
+- [Usage](#usage)
+- [Credits](#credits)
+- [License](#license)
+- [Features](#features)
+- [Tests](#tests)
+- [Contact](#contact)
 
-## Expanding the ESLint configuration
+## Installation
+* npm i
+* npm install @types/react @types/react-dom --save-dev
+* npm install @vitejs/plugin-react
+* npm install -D tailwindcss postcss autoprefixer
+* npx tailwindcss init -p
 
-If you're developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Configuration
+* Create a GitHub Personal Access Token
+* Create .env file in the environment folder
+* Add your GitHub token to .env as: VITE_GITHUB_TOKEN=your_token_here
 
-* Configure the top-level `parserOptions` property as follows:
+## Usage
+* npm run dev
+* npm run build
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+## Credits
+Nancy Watreas Feltman;  
+This project was developed with the assistance of Claude AI (Anthropic). Claude provided guidance on:
+- React and TypeScript implementation
+- Component styling with Tailwind CSS
+- GitHub API integration
+- Debugging and troubleshooting
 
-* Replace `plugin:@typescript-eslint/recommended` with `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`.
-* Optionally, add `plugin:@typescript-eslint/stylistic-type-checked`.
-* Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` and `plugin:react/jsx-runtime` to the `extends` list.
+## License
+MIT
 
----
-© 2024 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+## Features
+The Candidate Search App displays a single candidate on the `Candidate Search` page and includes the candidate's name, username, location, avatar, email, html_url, and company information. Directly below the candidate's GitHub user information are two buttons -  `Accept`and `Reject` which allow the user to either save a potential candidate by clicking the `Accept` button or move to the next candidate by clicking the `Reject` button. The navigation bar allows users to navigate to and from `Candidate Search` to `Saved Candidates`. Potential candidates are saved in local storage which allows users to review candidates as needed or remove them from their list.
+
+## Tests
+npm run build, npm run dev
+
+## Contact
+If there are any questions or concerns, I can be reached at:
+##### [github: noIDEA-tech](https://github.com/noIDEA-tech)
+##### [email: nwatreas2023@gmail.com](mailto:nwatreas2023@gmail.com)
