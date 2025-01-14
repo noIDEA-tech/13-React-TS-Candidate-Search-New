@@ -13,7 +13,7 @@ const Nav = () => {
                 isActive ? 'nav-link active' : 'nav-link'
             }
           >
-              Nav
+              Search Candidates
             </NavLink>
           </li>
           <li className="nav-item">
