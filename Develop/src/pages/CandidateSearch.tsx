@@ -48,12 +48,12 @@ const CandidateSearch = () => {
   }
 
   if (!currentCandidate) {
-    return <div className="text-center p-4">No candidates availale</div>;
+    return <div className="text-center p-4">No candidates available</div>;
   }
 
   return  (
     <div className="flex flex-col items-center p-8 max-w-2x1 mx-auto">
-      <h1 className="text-3x1 mb-8">CandidateSearch</h1>
+      <h1 className="text-3x1 mb-8">Candidate Search</h1>
 
       <div className="bg-gray-800 p-6 rounded-lg shadow-lg w-full">
         <div className="flex flex-col items-center">
