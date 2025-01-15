@@ -1,7 +1,7 @@
 # Candidate Search
 ![MIT](https://img.shields.io/badge/License-MIT-blue)
 
-## Website: 
+## Websites: 
 [GitHub Link](https://github.com/noIDEA-tech/13-React-TS-Candidate-Search-New/tree/main/Develop)
 
 [Render Link](https://https-github-com-noidea-tech-13-react-ts.onrender.com)
